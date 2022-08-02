@@ -1,0 +1,20 @@
+.developedby {
+    margin: 0;
+    background-color: red;
+    width: 100%;
+}
+
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+html {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+}

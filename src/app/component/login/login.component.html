@@ -1,0 +1,4 @@
+<div class="login">
+    <input name="name" id="username" (keyup)="onKey($event)" placeholder="Your name" class="inputname">
+    <button class="join" (click)="join()">{{loading ? 'Loading...' : 'Join'}}</button>
+</div>
