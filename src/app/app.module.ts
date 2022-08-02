@@ -7,6 +7,8 @@ import { LoginComponent } from './component/login/login.component';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ChatComponent } from './component/chat/chat.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config : SocketIoConfig = {url:'http://localhost:3000', options:{}}
 const appRoutes : Routes = [
   {path:'',component:LoginComponent},
   {path:'chat/:username',component:ChatComponent},
@@ -23,6 +25,8 @@ const appRoutes : Routes = [
     MdbCheckboxModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true}),
     FormsModule,
+    SocketIoModule.forRoot(config),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

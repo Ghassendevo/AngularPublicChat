@@ -1,2 +1,16 @@
-<p>Hello {{userChat}}</p>
-<a href="">go back</a>
+<div style="width:100% ;text-align: center;">
+    <p style='color:black ;font-size: 25px;font-weight:700 ;font-family: " Gill Sans ", sans-serif;'>Welcome {{userChat}} ';)</p>
+    <hr>
+</div>
+<div class="forChat">
+    <div class="formsg">
+        <div *ngFor="let msg of messages" style="display: flex;flex-direction: row;">
+            <p [ngStyle]=" { 'color': msg.user==userChat ? 'blue' : 'red'} ">{{msg.user}}: </p>
+            <p style="margin-left: 10px; ">{{msg.msg}} </p>
+        </div>
+    </div>
+    <div class="forinput ">
+        <input type="text " [(ngModel)]="messageValue " #usermsg (keyup.enter)="sendByEnter($event) " class="inputmsg " placeholder="Your message ">
+        <button (click)="sendMessage(usermsg.value) ">Send-></button>
+    </div>
+</div>
